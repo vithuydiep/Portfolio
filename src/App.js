@@ -3,14 +3,34 @@ import "./App.css";
 import Intro from "./Components/Intro/Intro";
 import Services from "./Components/Services/Services";
 import Experience from "./Components/Experience/Experience";
+import Work from "./Components/Work/Work";
+import Portfolio from "./Components/Portfolio/Portfolio";
+import Testimonials from "./Components/Testimonials/Testimonials";
+import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
+import { themContext } from "./Context";
+import { useContext } from "react";
 
 function App() {
+  const theme = useContext(themContext);
+  const darkMode = theme.state.darkMode;
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        background: darkMode ? "black" : "",
+        color: darkMode ? "white" : "",
+      }}
+    >
       <Navbar />
       <Intro />
       <Services />
       <Experience />
+      <Work />
+      <Portfolio />
+      <Testimonials />
+      <Contact />
+      <Footer />
     </div>
   );
 }

@@ -9,6 +9,7 @@ import Resume from "./Dev_Diep_Thuy_Vi.pdf";
 const Services = () => {
   return (
     <div className="services">
+      {/* Left side */}
       <div className="awesome">
         <span>My Awesome</span>
         <span>services</span>
@@ -22,6 +23,7 @@ const Services = () => {
         </a>
         <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
       </div>
+      {/* Right side */}
       <div className="cards">
         <div style={{ left: "14rem" }}>
           <Card
